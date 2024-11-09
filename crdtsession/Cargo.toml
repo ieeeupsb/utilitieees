@@ -1,0 +1,21 @@
+[package]
+name = "crdtsession"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+futures = "0.3.31"
+libp2p = { version = "0.54.1", features = ["async-std", "full", "gossipsub", "macros", "mdns", "noise", "ping", "quic", "tcp", "tokio", "yamux"] }
+tokio = { version = "1.41.1", features = ["full"] }
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/client.rs"
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
